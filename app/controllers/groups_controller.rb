@@ -8,16 +8,16 @@ class GroupsController < ApplicationController
   end
 
   def show
-   @group = Group.find(params[:id])
-   @posts = @group.posts.order("created_at DESC")
- end
+  @group = Group.find(params[:id])
+  @posts = @group.posts.order("created_at DESC")
+end
 
   def edit
   end
 
-def new
-  @group = Group.new
- end
+  def new
+   @group = Group.new
+  end
 
  def create
     @group = Group.new(group_params)
